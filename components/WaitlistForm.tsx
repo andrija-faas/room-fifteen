@@ -18,7 +18,7 @@ export default function WaitlistForm({ open }: { open: boolean }) {
 
   if (!open) {
     return (
-      <p className="rounded-full border border-gold/60 px-6 py-3 text-center font-medium text-gold">
+      <p className="mx-auto w-fit rounded-full border border-gold/60 px-6 py-3 text-center font-medium text-gold">
         Waitlist opens soon.
       </p>
     );
