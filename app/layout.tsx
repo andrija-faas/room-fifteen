@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 // Self-hosted (Fontsource, OFL) so builds don't depend on reaching Google Fonts.
@@ -12,6 +13,7 @@ const jetbrains = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl(),
   title: "Room Fifteen — Gambling, but efficient",
   description:
     "We bring efficiency to your gambling. Saving 100% of your time for 1% of your money.",

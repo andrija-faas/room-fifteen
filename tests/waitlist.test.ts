@@ -24,8 +24,12 @@ test("closed in prod with empty key", () => {
   expect(isWaitlistOpen({ NODE_ENV: "production", RESEND_API_KEY: "" })).toBe(false);
 });
 
-test("open in prod with key", () => {
-  expect(isWaitlistOpen({ NODE_ENV: "production", RESEND_API_KEY: "re_x" })).toBe(true);
+test("closed in prod with key while storage is still a stub", () => {
+  expect(isWaitlistOpen({ NODE_ENV: "production", RESEND_API_KEY: "re_x" })).toBe(false);
+});
+
+test("open in prod with key once storage is implemented", () => {
+  expect(isWaitlistOpen({ NODE_ENV: "production", RESEND_API_KEY: "re_x" }, true)).toBe(true);
 });
 
 test("addToWaitlist resolves", async () => {

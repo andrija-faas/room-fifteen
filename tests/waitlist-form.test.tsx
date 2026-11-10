@@ -89,3 +89,14 @@ test("consent line links to privacy", () => {
   expect(screen.getByText(/We'll email you when the simulator launches\. Unsubscribe anytime\./)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Privacy" })).toHaveAttribute("href", "/privacy");
 });
+
+test("honeypot input does not look like an autofillable field", () => {
+  const { container } = render(<WaitlistForm open />);
+  const inputs = Array.from(container.querySelectorAll("input"));
+  const honeypot = inputs.find((i) => i.type !== "email")!;
+  expect(honeypot).toBeDefined();
+  const hints = [honeypot.name, honeypot.id, honeypot.autocomplete, honeypot.labels?.[0]?.textContent ?? ""]
+    .join(" ")
+    .toLowerCase();
+  expect(hints).not.toMatch(/company|organi[sz]ation|org|name|email|tel|address/);
+});

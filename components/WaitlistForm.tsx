@@ -92,10 +92,11 @@ export default function WaitlistForm({ open }: { open: boolean }) {
           className="min-w-0 flex-1 rounded-full border border-line bg-surface px-5 py-3 text-ink placeholder:text-muted/60 focus:border-pink focus:outline-none focus:ring-2 focus:ring-pink/60"
         />
         <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
-          <label htmlFor="waitlist-company">Company</label>
+          {/* Honeypot: deliberately named so browsers never autofill it. */}
+          <label htmlFor="rf-hp">Leave this empty</label>
           <input
-            id="waitlist-company"
-            name="company"
+            id="rf-hp"
+            name="rf_hp"
             tabIndex={-1}
             autoComplete="off"
             value={company}
