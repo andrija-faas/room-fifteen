@@ -1,4 +1,4 @@
-type SiteEnv = { NEXT_PUBLIC_SITE_URL?: string; VERCEL_PROJECT_PRODUCTION_URL?: string };
+type SiteEnv = Record<string, string | undefined>;
 
 /** Absolute base URL for metadata (OG/Twitter image links). */
 export function siteUrl(env: SiteEnv = process.env): URL {
