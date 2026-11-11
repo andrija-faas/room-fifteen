@@ -1,6 +1,6 @@
 const rows = [
-  { label: "Projected losses (3 h slots, €1 stake)", amount: "€126.00" },
-  { label: "Time-saving fee (1%)", amount: "€1.26", badge: "Best value" },
+  { label: "Projected losses (VIP weekend, slots)", amount: "€125,249.00" },
+  { label: "Time-saving fee (1%)", amount: "€1,252.49", badge: "Best value" },
 ];
 
 export default function Pricing() {
@@ -21,7 +21,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <figure className="rounded-3xl border border-line bg-surface p-8 font-mono text-sm sm:text-base">
+        <figure className="rounded-3xl border border-line bg-surface p-5 font-mono text-sm sm:p-8 sm:text-base">
           <p className="mb-6 font-sans text-sm text-muted">Sample bill</p>
           <table className="w-full">
             <tbody>
@@ -30,24 +30,24 @@ export default function Pricing() {
                   <td className="py-4 pr-4 font-sans text-muted">
                     {r.label}
                     {r.badge && (
-                      <span className="ml-2 inline-block rounded-full bg-gold px-2 py-0.5 font-sans text-xs font-semibold text-bg">
+                      <span className="ml-2 inline-block whitespace-nowrap rounded-full bg-gold px-2 py-0.5 font-sans text-xs font-semibold text-bg">
                         {r.badge}
                       </span>
                     )}
                   </td>
-                  <td className={`py-4 text-right tabular-nums ${r.badge ? "text-gold" : "text-ink"}`}>
+                  <td className={`whitespace-nowrap py-4 text-right tabular-nums ${r.badge ? "text-gold" : "text-ink"}`}>
                     {r.amount}
                   </td>
                 </tr>
               ))}
               <tr>
                 <td className="pt-6 font-sans text-lg font-semibold text-ink">Total due</td>
-                <td className="pt-6 text-right text-2xl font-medium tabular-nums text-pink">€127.26</td>
+                <td className="whitespace-nowrap pt-6 text-right text-xl font-medium tabular-nums text-pink sm:text-2xl">€126,501.49</td>
               </tr>
             </tbody>
           </table>
           <figcaption className="mt-8 font-sans text-muted">
-            Time saved: <span className="font-mono text-gold">3 h 00 min</span>. You&apos;re welcome.
+            Time saved: <span className="font-mono text-gold">48 h 00 min</span>. You&apos;re welcome.
           </figcaption>
         </figure>
       </div>

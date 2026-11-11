@@ -91,11 +91,11 @@ take 1%" is technically true and still costs you everything a casino would.
 
    | Line | Amount |
    |---|---|
-   | Projected losses (3 h slots, €1 stake) | €126.00 |
-   | Time-saving fee (1%) — *best value* | €1.26 |
-   | **Total due** | **€127.26** |
+   | Projected losses (VIP weekend, slots) | €125,249.00 |
+   | Time-saving fee (1%) — *best value* | €1,252.49 |
+   | **Total due** | **€126,501.49** |
 
-   Caption: "Time saved: 3 h 00 min. You're welcome."
+   Caption: "Time saved: 48 h 00 min. You're welcome."
 6. **Comparison — Room Fifteen vs. real casinos**
 
    | | Room Fifteen | Real casinos |
