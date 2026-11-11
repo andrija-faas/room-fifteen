@@ -32,9 +32,9 @@ test("CTA targets waitlist", () => {
 
 test("sample bill totals", () => {
   render(<Pricing />);
-  expect(screen.getByText("€126.00")).toBeInTheDocument();
-  expect(screen.getByText("€1.26")).toBeInTheDocument();
-  expect(screen.getByText("€127.26")).toBeInTheDocument();
+  expect(screen.getByText("€125,249.00")).toBeInTheDocument();
+  expect(screen.getByText("€1,252.49")).toBeInTheDocument();
+  expect(screen.getByText("€126,501.49")).toBeInTheDocument();
 });
 
 test("comparison outcome row", () => {
